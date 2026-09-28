@@ -11,11 +11,12 @@
             <h2>Part 1: Conception</h2>
             The data that I will visualize comes from my digital diary of 4 Years.
             I have recently been learning to make an LLM out of it, for which visualizations are a helpful first step to understand the data.
-            For this 3D.js project I will visualize two simple things: How much was written over time and how many times a mood was mentioned.
+            For this 3D.js project I will visualize three simple things: How much was written over time, how many times a mood was mentioned and how many times were certain words mentioned.
             (A mood is a tag on each diary entry.)
 
             <h2>Part 2: Acquiring and cleaning up the data</h2>
-            The original data comes in folders per year. The data was anonymized with a python script. The mood was not anonymized.
+            The original data comes in folders per year. The data was anonymized with a python script so that it can be shown here. 
+            The mood was not anonymized.
             Then, date, text length and mood were extracted for each file.
             Finally, all the data was saved as 1 json file so that D3.js can read it in one go.
 
@@ -25,11 +26,23 @@
             Hovering on a bar highlights it and shows a tooltip.
             <br><br>
             The pie chart shows how often a mood was mentioned. Hovering an element highlights it both in the legend and in the pie.
+            <br><br>
+            The streamgraph shows the count of certain words per month.
+            Since the word characters were randomized, their occurrence is quite random.
+            There is only a slight correlation to how much was written during that time interval.
+            Most words that are longer than 3 characters only appear once.
+            Hovering shows the counts of all words in that month.
+            Clicking shows all diary entries of that month in which one of these words appear.
+            Using the original dataset, one would be able to see relevant words phasing in and out of my life.
 
             <h2>Bar Chart: Number of characters per month</h1>
             <div id="bar-chart"></div>
+
             <h2>Pie Chart: Count of each mood that was mentioned</h1>
             <div id="pie-chart"></div>
+
+            <h2>Streamgraph of selected words</h1>
+            <div id="stream-graph"></div>
         </main>
     </body>
 </html>
