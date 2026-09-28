@@ -229,12 +229,12 @@ function pieChart(data) {
 const WORDS = [
   'i',
   'am',
+  'love',
   'not',
+  'red',
   'me',
   'and',
-  'you',
-  'love',
-  'red'
+  'you'
 ]
 
 function streamGraph(data) {
