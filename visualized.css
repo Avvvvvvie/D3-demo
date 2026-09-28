@@ -1,0 +1,30 @@
+body {
+    border: box;
+    font-family: sans-serif;
+}
+
+rect.bar {
+    /*fill: #7171ff;*/
+}
+
+rect.bar:hover {
+    opacity: 0.7;
+}
+
+main {
+    width: 1040px;
+    margin: auto;
+    max-width: calc(100% - 2rem);
+}
+
+#bar-chart {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#pie-chart {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}

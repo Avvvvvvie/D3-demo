@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="visualized.css">   
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="visualized.js"></script>
+        <main>
+            <h1>Visualizations with D3.js</h1>
+            <h2>Part 1: Conception</h2>
+            The data that I will visualize comes from my digital diary of 4 Years.
+            I have recently been learning to make an LLM out of it, for which visualizations are a helpful first step to understand the data.
+            For this 3D.js project I will visualize two simple things: How much was written over time and how many times a mood was mentioned.
+            (A mood is a tag on each diary entry.)
+
+            <h2>Part 2: Acquiring and cleaning up the data</h2>
+            The original data comes in folders per year. The data was anonymized with a python script. The mood was not anonymized.
+            Then, date, text length and mood were extracted for each file.
+            Finally, all the data was saved as 1 json file so that D3.js can read it in one go.
+
+            <h2>Part 3: Creating the visualization</h2>
+            Below, the bar chart shows the number of characters written per month.
+            The data was aggregated to each month and the timescale was created in even intervals with the scaleBand function.
+            Hovering on a bar highlights it and shows a tooltip.
+            <br><br>
+            The pie chart shows how often a mood was mentioned. Hovering an element highlights it both in the legend and in the pie.
+
+            <h2>Bar Chart: Number of characters per month</h1>
+            <div id="bar-chart"></div>
+            <h2>Pie Chart: Count of each mood that was mentioned</h1>
+            <div id="pie-chart"></div>
+        </main>
+    </body>
+</html>
